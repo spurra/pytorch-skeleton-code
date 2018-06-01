@@ -1,0 +1,7 @@
+- This skeleton code should be generic enough to run most of the deep learning model in pytorch.
+The current skeleton contains code for 2D keypoint prediction given an RGB hand image and is 
+runnable.
+- The goal of the skeleton code is to have it generic enough such that only some functions need
+to be changed to run it on a new problem. The overall structure should stay fix. This allows
+for better optimization of workflow and data processing.
+- Data dimension convention: On CPU HxWxC. On (staging area of) GPU CxHxW. This is because currently the preprocessing is performed on the CPU, and a lot of libraries require HxWxC. However, pytorch (and TF) use CxHxW.
